@@ -29,3 +29,11 @@ body
 .operator {
     background-color: orange;
 }
+
+.operator:hover {
+    background-color: #ffb222;
+}
+
+.operator:active {
+    background-color: #fcbc45;
+}

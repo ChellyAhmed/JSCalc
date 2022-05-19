@@ -14,22 +14,22 @@
 <div class="calculator">
     <div class="display" id="display">0</div>
     <div class="buttons">
-        <button class="number" onclick="charWrite(this)">1</button>
-        <button class="number" onclick="charWrite(this)">2</button>
-        <button class="number" onclick="charWrite(this)">3</button>
-        <button class="operator" >+</button>
-        <button class="number" onclick="charWrite(this)">4</button>
-        <button class="number" onclick="charWrite(this)">5</button>
-        <button class="number" onclick="charWrite(this)">6</button>
-        <button class="operator" >-</button>
-        <button class="number" onclick="charWrite(this)">7</button>
-        <button class="number" onclick="charWrite(this)">8</button>
-        <button class="number" onclick="charWrite(this)">9</button>
-        <button class="operator" >*</button>
-        <button class="number" onclick="charWrite(this)">0</button>
-        <button class="operator" onclick="allClear()" >AC</button>
-        <button class="operator" >/</button>
-        <button class="operator" >=</button>
+        <button class="number" onclick="(calculator.charWrite(this))">1</button>
+        <button class="number" onclick="(calculator.charWrite(this))">2</button>
+        <button class="number" onclick="(calculator.charWrite(this))">3</button>
+        <button class="operator" onclick="(calculator.operation(this))">+</button>
+        <button class="number" onclick="(calculator.charWrite(this))">4</button>
+        <button class="number" onclick="(calculator.charWrite(this))">5</button>
+        <button class="number" onclick="(calculator.charWrite(this))">6</button>
+        <button class="operator" onclick="(calculator.operation(this))">-</button>
+        <button class="number" onclick="(calculator.charWrite(this))">7</button>
+        <button class="number" onclick="(calculator.charWrite(this))">8</button>
+        <button class="number" onclick="(calculator.charWrite(this))">9</button>
+        <button class="operator" onclick="(calculator.operation(this))">*</button>
+        <button class="number" onclick="(calculator.charWrite(this))">0</button>
+        <button class="operator" onclick="(calculator.allClear())" >AC</button>
+        <button class="operator" onclick="(calculator.operation(this))">/</button>
+        <button class="operator" onclick="(calculator.equal())">=</button>
         
     </div>
 </div>

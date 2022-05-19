@@ -1,14 +1,52 @@
+class Calculator {
+    constructor(a){
+        this.a = a;
+        this.ope = "";
+        this.eq = false;
+    }
 
-function charWrite(btn){
+    charWrite(btn) {
+        console.log(this.eq);
+        let displayed = document.getElementById("display").innerHTML;
+        if (this.eq){
+            displayed = 0;
+            this.eq = false;
+        }
+        (displayed == 0) && (displayed = "");
+        displayed = displayed.concat(btn.innerHTML);
+        document.getElementById("display").innerHTML = displayed;
+    }
+
+    allClear() {
+        document.getElementById("display").innerHTML = 0;
+        this.a = 0;
+        this.b = NaN;
+    }
+
+    operation(btn){
+        this.a = parseFloat(document.getElementById("display").innerHTML);
+        document.getElementById("display").innerHTML = 0;
+        this.ope = btn.innerHTML;
+    }
     
-    console.log(btn.innerHTML);
-    displayed = document.getElementById("display").innerHTML;
-    (displayed == 0 )&& (displayed = "") ;
-    displayed = displayed.concat(btn.innerHTML);
-    document.getElementById("display").innerHTML = displayed;
+    equal(){
+        this.eq=true;
+        if (this.ope == "+") {
+            document.getElementById("display").innerHTML = (this.a + parseFloat(document.getElementById("display").innerHTML));
+        }
+        else if (this.ope == "-") {
+            document.getElementById("display").innerHTML = (this.a - parseFloat(document.getElementById("display").innerHTML));
+        }
+        else if (this.ope == "*") {
+            document.getElementById("display").innerHTML = (this.a * parseFloat(document.getElementById("display").innerHTML));
+        }
+        else if (this.ope == "/") {
+            document.getElementById("display").innerHTML = (this.a / parseFloat(document.getElementById("display").innerHTML));
+        }
+        this.a = parseFloat(document.getElementById("display").innerHTML);
+
+
+    }
 }
 
-function allClear(){
-    document.getElementById("display").innerHTML = 0;
-
-}
+let calculator = new Calculator(0);
