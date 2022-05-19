@@ -1,0 +1,31 @@
+body
+
+.calculator{
+    width: 20%;
+}
+
+.display {
+    background-color: #333;
+    color: white;
+    line-height: 200%;
+    text-align: right;
+    padding-right: 5%;
+    margin-bottom: 2%;
+    border-radius: 0.3em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%;
+    grid-template-rows: auto;
+    grid-gap: 4%;
+
+}
+
+.buttons button{
+    line-height: 200%;   
+}
+
+.operator {
+    background-color: orange;
+}
