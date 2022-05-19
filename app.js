@@ -15,6 +15,7 @@ class Calculator {
         //If the display is a result, erase it and let user type completely new entry
         if (this.eq){
             displayed = 0;
+            this.a = 0;
             this.eq = false;
         }
 
@@ -29,7 +30,10 @@ class Calculator {
     }
 
     operation(btn){
-
+        this.ope = btn.innerHTML;
+        //if this.eq is true, we should set it back to false because the result is no longer just a result but it is part of the operation
+        (this.eq) && (this.eq = false);
+        
         //if this.a is already filled with a number, we update it so we can do multiple operations in a row.
         if (this.ope == "+") {
             this.a = parseFloat(document.getElementById("display").innerHTML) + this.a;
@@ -49,7 +53,6 @@ class Calculator {
         //Once operation button is clicked, update the display with 0
         document.getElementById("display").innerHTML = 0;
 
-        this.ope = btn.innerHTML;
     }
     
     equal(){
@@ -68,7 +71,7 @@ class Calculator {
         else if (this.ope == "/") {
             document.getElementById("display").innerHTML = (this.a / parseFloat(document.getElementById("display").innerHTML));
         }
-        this.a = parseFloat(document.getElementById("display").innerHTML);
+        this.a = 0;
 
 
     }
