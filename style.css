@@ -15,15 +15,15 @@ body
 }
 
 .buttons {
+    /* A grid of buttons that has 4 columns with gap between them */
     display: grid;
     grid-template-columns: 22% 22% 22% 22%;
     grid-template-rows: auto;
     grid-gap: 4%;
-
 }
 
 .buttons button{
-    line-height: 200%;   
+    line-height: 250%;   
 }
 
 .operator {
