@@ -24,7 +24,24 @@ class Calculator {
     }
 
     operation(btn){
-        this.a = parseFloat(document.getElementById("display").innerHTML);
+
+
+        if (this.ope == "+") {
+            this.a = parseFloat(document.getElementById("display").innerHTML) + this.a;
+        }
+        else if (this.ope == "-") {
+            this.a = parseFloat(document.getElementById("display").innerHTML) - this.a;
+        }
+        else if (this.ope == "*") {
+            (this.a ==0) && (this.a = 1)
+            this.a = parseFloat(document.getElementById("display").innerHTML) * this.a;
+        }
+        else if (this.ope == "/") {
+            (this.a ==0) && (this.a = 1)
+            this.a = parseFloat(document.getElementById("display").innerHTML) / this.a;
+        }
+
+
         document.getElementById("display").innerHTML = 0;
         this.ope = btn.innerHTML;
     }
