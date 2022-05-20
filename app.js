@@ -6,9 +6,10 @@ class Calculator {
         this.ope = "";
         //Keep track of whether the display was entered by the user or just a result
         this.eq = false;
+
     }
 
-    charWrite(btn) {
+    charWrite(char) {
         //Get the current number on the display
         let displayed = document.getElementById("display").innerHTML;
 
@@ -20,7 +21,7 @@ class Calculator {
         }
 
         (displayed == 0) && (displayed = "");
-        displayed = displayed.concat(btn.innerHTML);
+        displayed = displayed.concat(char);
         document.getElementById("display").innerHTML = displayed;
     }
 
@@ -30,7 +31,7 @@ class Calculator {
     }
 
     operation(btn){
-        this.ope = btn.innerHTML;
+        this.ope = btn;
         //if this.eq is true, we should set it back to false because the result is no longer just a result but it is part of the operation
         (this.eq) && (this.eq = false);
         
@@ -72,9 +73,31 @@ class Calculator {
             document.getElementById("display").innerHTML = (this.a / parseFloat(document.getElementById("display").innerHTML));
         }
         this.a = 0;
-
-
     }
+
 }
 
 let calculator = new Calculator(0);
+
+//Keyboard events
+document.addEventListener('keypress', (event) => { //keydown, when keys are pressed 
+    var name = event.key;
+    var code = event.code;
+    if (!isNaN(name) ){
+        calculator.charWrite(name);
+    }
+    
+    else if (code== "KeyC" ){ //Code used instead of name because c and C have different names but same codes.
+        calculator.allClear();
+    }
+
+    else if (name == "="){
+        calculator.equal();
+    }
+
+    else if (name == "+" || name == "-" || name == "*" || name == "/"){
+        console.log("operation:", {name});
+        calculator.operation(name);
+    }
+
+  }, false);

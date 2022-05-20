@@ -14,22 +14,22 @@
 <div class="calculator">
     <div class="display" id="display">0</div>
     <div class="buttons">
-        <button class="number" onclick="(calculator.charWrite(this))">1</button>
-        <button class="number" onclick="(calculator.charWrite(this))">2</button>
-        <button class="number" onclick="(calculator.charWrite(this))">3</button>
-        <button class="operator" onclick="(calculator.operation(this))">+</button>
-        <button class="number" onclick="(calculator.charWrite(this))">4</button>
-        <button class="number" onclick="(calculator.charWrite(this))">5</button>
-        <button class="number" onclick="(calculator.charWrite(this))">6</button>
-        <button class="operator" onclick="(calculator.operation(this))">-</button>
-        <button class="number" onclick="(calculator.charWrite(this))">7</button>
-        <button class="number" onclick="(calculator.charWrite(this))">8</button>
-        <button class="number" onclick="(calculator.charWrite(this))">9</button>
-        <button class="operator" onclick="(calculator.operation(this))">*</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">1</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">2</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">3</button>
+        <button class="operator" onclick="(calculator.operation(this.innerHTML))">+</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">4</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">5</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">6</button>
+        <button class="operator" onclick="(calculator.operation(this.innerHTML))">-</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">7</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">8</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">9</button>
+        <button class="operator" onclick="(calculator.operation(this.innerHTML))">*</button>
         <button class="operator" onclick="(calculator.allClear())" >AC</button>
-        <button class="number" onclick="(calculator.charWrite(this))">0</button>
+        <button class="number" onclick="(calculator.charWrite(this.innerHTML))">0</button>
         <button class="operator" onclick="(calculator.equal())">=</button>
-        <button class="operator" onclick="(calculator.operation(this))">/</button>
+        <button class="operator" onclick="(calculator.operation(this.innerHTML))">/</button>
         
     </div>
 </div>
